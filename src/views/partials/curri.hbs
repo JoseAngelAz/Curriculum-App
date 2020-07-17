@@ -1,0 +1,215 @@
+{{#each curris}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        .telefonito,.lugar,.mail,.enlace,.in,.social,.tweet,.insta,.punto{
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div>
+        
+       <div class="container">           
+           <div class="row">                                                              
+               <div class="card col-12 shadow-lg bg-light">
+                   <div class="card-header">
+                   <h2 class="text-center text-info">CV del Usuario {{user.nombre}}</h2>
+                   </div>
+               <div class="card-body">
+               <div class="row">
+                   
+                   <div class="contenedor izUno bg-info col-3">
+                      
+                   <div class="foto-user mb-3">
+                   <img src="/img/man-profile.svg"
+                    alt="perfilFoto"
+                    class="border border-warning rounded-circle mt-3"
+                    />
+                   </div>
+                  
+                   <div class="contacto">
+                       <h4 class="text-gray border-bottom">CONTACTO</h4>
+                      
+                       <div class="ncelular container row mb-2">
+                       <span class="material-icons telefonito mr-3">
+                       stay_current_portrait
+                       </span>
+                       <div class="numero text-white">${numero}</div>
+                       </div>
+                      
+                       <div class=" row locasión">
+                       <span class="material-icons lugar col-1">
+                       location_on
+                       </span>
+                       <p class="text-white col-10">${direccion}</p>
+                       </div>    
+                      
+                       <div class="row">
+                       <span class="col-1 material-icons mail">email</span>
+                       <p class="col-10 text-white">${email}</p>
+                       </div>   
+                                
+                       <div class="row">
+                       <span class="col-1 material-icons enlace">link</span>
+                       <p class="col-10 text-white">${pag_web}</p>
+                       </div>
+                   </div>
+                   
+                   <div class="redes">
+                       <h4 class="text-gray border-bottom">REDES SOCIALES</h4>
+                       <div class="row">
+                       <span class="material-icons in col-1">public</span>
+                       <p class="text-white col-10">${red_s_uno}</p>
+                       </div>
+                       <div class="row">
+                       <span class="col-1 material-icons social">emoji_people</span>
+                       <p class="col-10 text-white">${red_s_dos}</p>
+                       </div>
+                       <div class="row">
+                       <span class="col-1 material-icons tweet">mms</span>
+                       <p class="text-white col-10">${red_s_tres}</p>
+                       </div>
+                       <div class="row">
+                       <span class="material-icons insta col-1">center_focus_weak</span>
+                       <p class="col-10 text-white">
+                           ${red_s_cuatro}
+                       </p>
+                       </div>
+                   </div>
+                   
+                   <div class="habilidades">
+                       <h4 class="text-gray border-bottom">HABILIDADES</h4>
+                       <div class="row">
+                           <h6 class="text-white col-5">JavaScript</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">HTML</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">Figma</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">Ilustrator</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">CSS</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                   </div>
+                  
+                   <div class="referencias">
+                       <h4 class="border-bottom">REFERENCIAS</h4>
+                      
+                       <div class="row">
+                       <p class="col-12 text-white">${nombre_ref_uno}</p> 
+                       <p class="col-12 text-white mt-n3">${numero_ref_uno}</p>
+                       <p class="col-12 text-white mt-n3">${email_ref_uno}</p>
+                       </div>
+                       <div class="row">
+                       <p class="col-12 text-white">${nombre_ref_dos}</p> 
+                       <p class="col-12 text-white mt-n3">${numero_ref_dos}</p>
+                       <p class="col-12 text-white mt-n3">${email_ref_dos}</p>
+                       </div>
+                   </div>
+                   </div>
+                   
+                  
+                   <div class="col-9 ">
+                       <div class="contenedor1 border-bottom">
+                       <h2 class="text-uppercase">
+                           {{nombre}}
+                           </h2>
+                       <h3 class="text-muted">${vocacion}</h3>
+                       <p class="text-muted">${voca_descript}</p>
+                       </div>
+                      
+                       <div class="exp-laboral contenedor2 border-bottom">
+                           <h3>EXPERIENCIA LABORAL</h3>
+                           <div class="">
+                               <h4 class="text-muted">${exp_laboral}</h4>
+                           <p class="text-muted">${exp_laboral_descrip}</p>
+                           </div>
+                       </div>
+                       
+                       <div class="educacion contenedor3 border-bottom">
+                       <h3>EDUCACIÓN</h3>
+                       <div class="">
+                           <h4 class="text-muted">${educacion}</h4>
+                           <p class="text-muted">
+                               ${educacion_nombre}
+                           </p>
+                       </div>
+                       </div>
+                       
+                       <div class="cursos contenedor4 border-bottom">
+                           <h4 class="">CURSOS</h4>
+                           <p class="text-muted">
+                               <h5>${cursos}</h5>
+                               <p class="text-muted">
+                                   ${cursos_descript}
+                               </p>
+                           </p>
+                       </div>
+                       </div>
+               </div>
+               </div>                      
+               <div class="card-footer">
+                  
+               </div>
+               </div>
+           </div> 
+           
+       </div>
+      
+   </div>
+</body>
+</html>
+{{else}}
+<div class="card">
+<div class="card-body">
+    <p>TEXTO DEFAULT</p>
+</div>
+</div>
+{{/each}}

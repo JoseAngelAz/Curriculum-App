@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Curriculum</title>
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        .telefonito,.lugar,.mail,.enlace,.in,.social,.tweet,.insta,.punto{
+    color: white;
+}
+    </style>
+</head>
+<body> 
+    <div>        
+        <form action="/add-newCurriculum" method="POST">
+                   <div class="container">           
+           <div class="row">                                                         
+               <div class="card col-12 shadow-lg bg-light">
+                   <div class="card-header">
+                   <h2 class="text-center text-info">CV del Usuario</h2>
+                   </div>
+               <div class="card-body">
+               <div class="row">
+                   
+                   <div class="contenedor izUno bg-info col-3">
+                      
+                   <div class="foto-user mb-3">
+                   <img src="/img/man-profile.svg"
+                    alt="perfilFoto"
+                    class="border border-warning rounded-circle mt-3"
+                    />
+                   </div>
+                  
+                   <div class="contacto">
+                       <h4 class="text-gray border-bottom">CONTACTO</h4>
+                      
+                       <div class="ncelular container row mb-2">
+                       <span class="material-icons telefonito mr-3">
+                       stay_current_portrait
+                       </span>
+                       <!--Telefono-->
+                       <input name="telefono" placeholder="  Telefono" class="form-control p-0 col-9" type="text">
+                       </div>
+                      
+                       <div class=" row locasión">
+                       <span class="material-icons lugar col-1">
+                       location_on
+                       </span>
+                       <!--Dirección-->
+                       <input class="form-control col-7 ml-4" placeholder="Dirección" type="text" name="direccion">
+                       </div>    
+                      
+                       <div class="row">
+                           <!--Email-->
+                       <span class="col-1 material-icons mail">email</span>
+                       <input name="email" class="col-7 ml-4 mt-2 form-control" type="text" placeholder="Email"/>
+                       </div>   
+                        <!--Pagina Web-->
+                       <div class="row">
+                       <span class="col-1 material-icons enlace">link</span>
+                      <input name="pag_web" class="col-7 mb-3 ml-4 mt-2 form-control" type="text" placeholder="pagina web" />
+                       </div>
+                   </div>
+                   
+                   <div class="redes">
+                       <h4 class="text-gray border-bottom">REDES SOCIALES</h4>
+                        <!--Red Uno-->
+                       <div class="row">
+                       <span class="material-icons in col-1">public</span>
+                       <input name="red_uno" class="col-7 ml-4 mt-2 form-control" type="text" placeholder="Red social uno"/>
+                       </div>
+                       <!--Red dos-->
+                       <div class="row">
+                       <span class="col-1 material-icons social">emoji_people</span>
+                       <input name="red_dos" class="col-7 ml-4 mt-2 form-control" type="text" placeholder="Red social dos"/>
+                       </div>
+                       <!--Red Tres -->
+                       <div class="row">
+                       <span class="col-1 material-icons tweet">mms</span>
+                       <input name="red_tres" class="col-7 ml-4 mt-2 form-control" type="text" placeholder="Red social Tres"/>
+                       </div>
+                       <!--Red Cuatro -->
+                       <div class="row">
+                       <span class="material-icons insta col-1">center_focus_weak</span>
+                       <input name="red_cuatro" class="col-7 mb-3 ml-4 mt-2 form-control" type="text" placeholder="Red social Cuatro"/>
+                       </div>
+                   </div>
+                   
+                   <div class="habilidades">
+                       <h4 class="text-gray border-bottom">HABILIDADES</h4>
+                       <div class="row">
+                           <h6 class="text-white col-5">JavaScript</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">HTML</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">Figma</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <h6 class="text-white col-5">Ilustrator</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                       <div class="row mb-3">
+                           <h6 class="text-white col-5">CSS</h6>
+                           <div class=" col-7">
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <span class="material-icons punto">fiber_manual_record</span>
+                           <i class="material-icons orange600 punto">fiber_manual_record</i>
+                           </div>
+                       </div>
+                   </div>
+                  
+                   <div class="referencias">
+                       <h4 class="border-bottom">REFERENCIAS</h4>
+                      <!--Ref Uno -->
+                       <div class="row">
+                       <input name="nombre_ref_uno" class="form-control col-9 ml-4 mt-2 form-control" type="text" placeholder="Nombre Ref Uno"/>
+                       <input name="numero_ref_uno" class="col-9 ml-4 mt-2 form-control" type="text" placeholder="Numero ref uno"/>
+                       <input name="email_ref_uno" class="form-control col-9 ml-4 mt-2 form-control" type="email" placeholder="Email Ref Uno"/>
+                       </div>
+                       <!--Ref Dos -->
+                       <div class="row">
+                       <input name="nombre_ref_dos" class="form-control col-9 ml-4 mt-2 form-control" type="text" placeholder="Nombre Ref Dos"/>
+                       <input name="numero_ref_dos" class="col-9 ml-4 mt-2 form-control" type="text" placeholder="Numero ref Dos"/>
+                       <input name="email_ref_dos" class="form-control col-9 mb-4 ml-4 mt-2 form-control" type="email" placeholder="Email Ref Dos"/>
+                       </div>
+                   </div>
+                   </div>
+                   
+                  
+                   <div class="col-9 ">
+                       <div class="contenedor1 border-bottom">
+                       <input name="nombre" type="text" class="form-control mb-3" placeholder="Nombre Completo">
+                       <input name="vocacion" type="text" class="form-control mb-3" placeholder="Vocación">
+                       <textarea name="voca_descript" class="form-control mb-3" placeholder="Desciba su vocación" ></textarea>
+                       </div>
+                      
+                       <div class="exp-laboral contenedor2 border-bottom">
+                           <h3>EXPERIENCIA LABORAL</h3>
+                           <div class="">
+                              <input name="exp_laboral_nombre" type="text" class="form-control mb-3" placeholder="Area o cargo">
+                           <textarea class="form-control mb-3" name="exp_laboral_descript" placeholder="Describe que hacías"></textarea>
+                           </div>
+                       </div>
+                       
+                       <div class="educacion contenedor3 border-bottom">
+                       <h3>EDUCACIÓN</h3>
+                       <div class="">
+                           <input name="educacion_nombre" type="text" class="form-control mb-3" placeholder="Que Estudio?">
+                           <input name="lugar_educacion" type="text" class="form-control mb-3" placeholder="Donde Estudió?">
+                       </div>
+                       </div>
+                       
+                       <div class="cursos contenedor4 border-bottom">
+                           <h4 class="">CURSOS</h4>
+                           <p class="text-muted">
+                               <input name="curso_name" type="text" class="form-control mb-3" placeholder="Nombre del curso">
+                               <textarea class="form-control mb-3" name="curso_descript" placeholder="Describe que aprendiste"></textarea>
+                           </p>
+                       </div>
+                       <button type="submit" class="btn btn-success btn-block">Guardar Cv</button>
+                       </div>
+               </div>
+               </div>
+               <div class="card-footer">
+                  
+               </div>
+               </div>
+           </div> 
+        </form>
+    </div>    
+   </div>
+</body>
+</html>
+    
+  

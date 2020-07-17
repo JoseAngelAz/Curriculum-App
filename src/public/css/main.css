@@ -1,0 +1,67 @@
+body{
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+} 
+
+.milogo{
+    width: 200px;
+    height: auto;
+}
+
+.muestras{
+    height: 25em;
+}
+
+.correo{
+    width: 12em;
+    height: 3em;
+    font-size: 1em;
+    margin-left: -1em;
+}
+
+.vocacion{
+    /* height: 5em;
+    width: 20em; */
+    font-size: 1em;
+}
+
+@media (max-width:411px){
+    
+    .vocacion{
+        height: 2em;
+        width: 10em;
+        font-size: 2em;
+    }
+    
+    .revisarCV{
+        color: rgb(40, 84, 202);
+        margin-top: 30px;
+        margin-left: -1em;
+    }
+        
+    .muestras{
+        height: 30em;
+        margin-left: -20px !important ;
+        width: 25.3rem !important;
+        margin-bottom: 2em !important;
+    }
+
+    .correo{
+        width: 12em;
+        height: 3em;
+        font-size: 2em;
+        margin-left: -1em;
+    }
+    .nombre{
+        font-size: 2em;
+        background:rgba(255, 255, 255, 0.5);
+    }
+
+    .footer{
+        height: 10em;
+    }
+    .login{
+        height: 35em;
+    }
+}
