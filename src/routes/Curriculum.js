@@ -276,7 +276,7 @@ router.post('/downloadPdf',isAuthenticated, async(req,res)=>{
         process.exit();
         console.log('estamos en writeFileSync');
     }); 
-   
+   // guardando en github
 });
 
 module.exports = router;
