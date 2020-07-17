@@ -6,6 +6,7 @@ const {isAuthenticated} = require('../config/auth.config');
 const fs = require('fs');
 const carbone = require('carbone');
 const objetoPdf = require('../templates/template.json');
+const { json } = require('express');
 
 router.get('/add-newCurriculum',isAuthenticated,(req,res)=>{
     res.render('curriculums/new-Cv')
@@ -256,18 +257,16 @@ router.delete('/Curriculums/Delete/:id',isAuthenticated,async(req,res)=>{
 });
 
 //Gen PDF
-router.post('/downloadPdf',isAuthenticated, async(req,res)=>{
+router.post('/downloadPdf/:id',isAuthenticated, async(req,res)=>{
 
-    const data ={
-        'firstname':'Angel',
-        'lastname':'Azucena'
-    }
+    const CvJson = json( Curriculum.findById(req.params.id));
 
     const options = {
         converTo:'pdf'//puede ser docx, txt, ...
     }
+    
                 //NO reconocine el archivo de origen, no lo encuentra.
-    carbone.render('./src/templates/template.odt',data,options,(err,result)=>{
+    carbone.render('./src/templates/template.odt',CvJson,options,(err,result)=>{
         if (err) {
             return console.log('Algo salio mal: ', err);
         }

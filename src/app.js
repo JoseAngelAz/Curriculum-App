@@ -62,6 +62,10 @@ app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 app.use(require('./routes/Curriculum'));
 app.use(require('./routes/EjemploCV'));
+
+// ruta para ver la api de curriculums
+app.use(require('./routes/apis/AllCvs'));
+
 //routing css
 app.use(express.static(path.join(__dirname,'public')));
 
