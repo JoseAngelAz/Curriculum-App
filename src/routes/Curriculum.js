@@ -257,25 +257,26 @@ router.delete('/Curriculums/Delete/:id',isAuthenticated,async(req,res)=>{
 });
 
 //Gen PDF
-router.post('/downloadPdf/:id',isAuthenticated, async(req,res)=>{
+router.post('/ReadCurriculum/:id',isAuthenticated, async(req,res)=>{
 
     const CvJson = json( Curriculum.findById(req.params.id));
 
     const options = {
         converTo:'pdf'//puede ser docx, txt, ...
     }
-    
-                //NO reconocine el archivo de origen, no lo encuentra.
+               
     carbone.render('./src/templates/template.odt',CvJson,options,(err,result)=>{
         if (err) {
             return console.log('Algo salio mal: ', err);
         }
+        
         //escribir resultado
         fs.writeFileSync('./result.odt',result);
+        res.redirect('/all-cv');
         process.exit();
-        console.log('estamos en writeFileSync');
+        
     }); 
-   // guardando en github
+    
 });
 
 module.exports = router;
