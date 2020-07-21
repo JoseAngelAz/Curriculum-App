@@ -5,6 +5,7 @@ const {isAuthenticated} = require('../config/auth.config');
 //gen Pdf modules required
 const fs = require('fs');
 const carbone = require('carbone');
+const {POST_PDF_NEW, GET_DOWNLOADPDF} = require('../modules/carbon');
 const objetoPdf = require('../templates/template.json');
 const { json } = require('express');
 
@@ -259,8 +260,8 @@ router.delete('/Curriculums/Delete/:id',isAuthenticated,async(req,res)=>{
 //Gen PDF
 router.post('/ReadCurriculum/:id',isAuthenticated, async(req,res)=>{
 
-    const CvJson = json( Curriculum.findById(req.params.id));
-
+    const CvJson =  Curriculum.findById(req.params.id).sort('desc').lean();
+    console.log(CvJson);
     const options = {
         converTo:'pdf'//puede ser docx, txt, ...
     }
@@ -272,11 +273,26 @@ router.post('/ReadCurriculum/:id',isAuthenticated, async(req,res)=>{
         
         //escribir resultado
         fs.writeFileSync('./result.odt',result);
-        res.redirect('/all-cv');
         process.exit();
+        res.send(result);
+        res.redirect('/CurriculumsVitae');
         
     }); 
     
 });
+
+//segundo metodo para generar pdf
+router.post('/dowloadPDFcarbone',isAuthenticated,(req,res)=>{
+    console.log('funciona el segundo boton');
+  
+    //metodo o logica para generar el pdf
+     POST_PDF_NEW();
+     GET_DOWNLOADPDF();
+
+    req.flash('success_msg','Se ha descargado el documento en PDF');
+    res.redirect('CurriculumsVitae');
+});
+
+
 
 module.exports = router;
